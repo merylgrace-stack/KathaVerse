@@ -1,0 +1,197 @@
+,
+  {
+    id: 'kathakali',
+    title: { en: 'Kathakali', ml: 'കഥകളി' },
+    subtitle: { en: 'The Story Play of Kerala', ml: 'കേരളത്തിന്റെ കഥാനാടകം' },
+    description: {
+      en: 'Kathakali is Kerala’s classical dance-drama — a night-long performance where stories from the epics are told through codified hand gestures, facial expressions, music, and towering costumes. Every colour on the face is a moral language.',
+      ml: 'കഥകളി കേരളത്തിന്റെ ശാസ്ത്രീയ നൃത്തനാടകമാണ് — മുദ്രകൾ, മുഖാഭിനയം, സംഗീതം, വമ്പിച്ച വേഷം എന്നിവിലൂടെ ഇതിഹാസ കഥകൾ പറയുന്ന രാത്രി നീണ്ട കലാരൂപം. മുഖത്തെ ഓരോ നിറവും ഒരു ധാർമ്മിക ഭാഷയാണ്.',
+    },
+    coverImage: '/images/theyyam.png',
+    category: 'art',
+    readingTime: 16,
+    featured: false,
+    trending: true,
+    createdAt: '2024-02-10',
+    tags: ['kathakali', 'dance', 'theatre', 'mudra', 'epic', 'kerala'],
+    sources: [
+      'Kathakali: The Art of the Non-Worldly — K.P.S. Menon',
+      'Kerala Kalamandalam archives',
+      'UNESCO documentation on Kutiyattam and related performance traditions',
+    ],
+    glossary: [
+      { term: 'Mudra', meaning: 'A codified hand gesture used in Kathakali to communicate words, ideas, and emotions. The vocabulary is drawn largely from the Hastalakshanadeepika.', pronunciation: 'Mu-dra' },
+      { term: 'Navarasas', meaning: 'The nine aesthetic emotions — love, laughter, sorrow, anger, heroism, fear, disgust, wonder, and peace — expressed through the performer’s face and body.', pronunciation: 'Nava-rasas' },
+      { term: 'Chutti', meaning: 'The elaborate white rice-paste border applied to the face, which frames expressions and transforms the performer into a larger-than-life figure.', pronunciation: 'Chut-ti' },
+      { term: 'Pacha', meaning: 'The green-faced character type, usually representing noble heroes and divine figures such as Krishna or Rama.', pronunciation: 'Pa-cha' },
+      { term: 'Kathi', meaning: 'The knife-faced character type, marked by red patches and an upturned moustache, representing proud or flawed anti-heroes.', pronunciation: 'Ka-thi' },
+    ],
+    chapters: [
+      {
+        id: 'kathakali-1',
+        title: { en: 'A Language Without Words', ml: 'വാക്കില്ലാത്ത ഭാഷ' },
+        content: {
+          en: `Kathakali does not speak in dialogue. It speaks in a language older than the stage: the disciplined movement of hands, eyes, cheeks, and breath. A raised eyebrow can mean a kingdom; a trembling finger can summon a storm.
+
+**The training**
+
+A Kathakali performer begins young, learning control before expression. The body is made flexible, the eyes are trained to move independently, and the hands are taught the grammar of mudras. Only after years of discipline does the performer step into a full story.
+
+**The all-night stage**
+
+Traditional performances unfold through the night, lit by the warm glow of the kalivilakku (oil lamp). The audience arrives knowing the epic — the pleasure is not surprise, but recognition: how will this performer embody Duryodhana’s pride, or Nalacharitan’s longing, tonight?`,
+          ml: `കഥകളി സംഭാഷണത്തിൽ സംസാരിക്കുന്നില്ല. അത് മുദ്രകളുടേയും കണ്ണുകളുടേയും മുഖഭാവങ്ങളുടേയും അച്ചടക്കമുള്ള ഭാഷയിലാണ് സംസാരിക്കുന്നത്. ഉയർന്ന പുരികം ഒരു രാജ്യം പോലെ; വിറയ്ക്കുന്ന വിരൽ ഒരു കൊടുങ്കാറ്റ് പോലെ.`,
+        },
+      },
+      {
+        id: 'kathakali-2',
+        title: { en: 'Faces of Good and Evil', ml: 'നന്മയുടെയും തിന്മയുടെയും മുഖങ്ങൾ' },
+        content: {
+          en: `Kathakali’s makeup is a moral map. Green (pacha) faces mark noble heroes. Red-and-black kathi faces mark powerful, flawed figures — not simple villains, but characters driven by pride, desire, and fate. White beards suggest divinity; red beards suggest ferocity.
+
+**The transformation**
+
+The chutti artist builds the performer’s face into a mask-like presence while keeping it alive. The costume extends the body outward — wide skirts, layered ornaments, and towering headpieces — so the smallest gesture can be read across a temple courtyard.
+
+*Note: Kathakali draws on Sanskrit literary traditions and local performance practice. Character types guide the audience, but each performance interprets the epic anew.*`,
+          ml: `കഥകളി മേക്കപ്പ് ഒരു ധാർമ്മിക ഭൂപടമാണ്. പച്ച മുഖം ഉദാത്തനായ നായകനെ സൂചിപ്പിക്കുന്നു; കത്തി മുഖം അഹങ്കാരവും ശക്തിയുമുള്ള കഥാപാത്രത്തെ.`,
+        },
+      },
+      {
+        id: 'kathakali-3',
+        title: { en: 'The Living Tradition', ml: 'ജീവിക്കുന്ന പാരമ്പര്യം' },
+        content: {
+          en: `Kathakali survives because communities keep teaching it — in training centres, village stages, and temple festivals. Institutions such as Kerala Kalamandalam have helped preserve rigorous training, while local performances keep the art close to the people who first shaped it.
+
+To watch Kathakali is to accept a slower time. The story unfolds with patience, and meaning gathers in the space between drumbeat and glance. It is not merely a performance of the past; it is Kerala continuing to speak its epics in a living form.`,
+          ml: `കഥകളി ഇന്നും ജീവിക്കുന്നത് അത് പഠിപ്പിക്കുകയും അരങ്ങിൽ അവതരിപ്പിക്കുകയും ചെയ്യുന്നതിനാലാണ്. കേരള കലാമണ്ഡലം പോലുള്ള സ്ഥാപനങ്ങളും ക്ഷേത്രോത്സവ അരങ്ങുകളും ഈ കലയെ കാലത്തിനൊപ്പം നിലനിർത്തുന്നു.`,
+        },
+      },
+    ],
+  },
+  {
+    id: 'vishu',
+    title: { en: 'Vishu', ml: 'വിഷു' },
+    subtitle: { en: 'The First Sight of the New Year', ml: 'പുതുവർഷത്തിന്റെ ആദ്യക്കാഴ്ച' },
+    description: {
+      en: 'Vishu marks the Malayalam New Year with an act of seeing: the Vishukkani, a carefully arranged first sight of abundance, light, and hope. It is a festival of thresholds — between seasons, years, and intentions.',
+      ml: 'വിഷു മലയാള പുതുവർഷത്തെ ഒരു ദർശനത്തോടെ വരവേൽക്കുന്നു: സമൃദ്ധിയും വെളിച്ചവും പ്രതീക്ഷയും നിറഞ്ഞ വിഷുക്കണി. ഋതുക്കൾക്കും വർഷങ്ങൾക്കും ആശകൾക്കും ഇടയിലെ ഒരു ഉത്സവമാണിത്.',
+    },
+    coverImage: '/images/mahabali.jpg',
+    category: 'festival',
+    readingTime: 14,
+    featured: false,
+    trending: false,
+    createdAt: '2024-03-05',
+    tags: ['vishu', 'festival', 'new year', 'kani', 'kerala', 'harvest'],
+    sources: [
+      'Festivals of Kerala — Department of Cultural Affairs, Kerala',
+      'Malayalam calendar traditions documented in regional almanacs (Panchangam)',
+      'Oral household practices across central and southern Kerala',
+    ],
+    glossary: [
+      { term: 'Vishukkani', meaning: 'The auspicious arrangement viewed first on Vishu morning — typically including flowers, fruits, grain, a lamp, and a mirror — symbolising prosperity for the year ahead.', pronunciation: 'Vishu-kani' },
+      { term: 'Kani Konna', meaning: 'The golden shower tree (Cassia fistula), whose bright yellow blossoms are closely associated with Vishu.', pronunciation: 'Kani-konna' },
+      { term: 'Vishukkaineettam', meaning: 'The custom of elders giving money or gifts to younger family members on Vishu, as a blessing of abundance.', pronunciation: 'Vishu-kaineettam' },
+      { term: 'Nilavilakku', meaning: 'A traditional Kerala brass oil lamp, lit to signify auspiciousness and clarity.', pronunciation: 'Nila-vilakku' },
+    ],
+    chapters: [
+      {
+        id: 'vishu-1',
+        title: { en: 'The Arrangement of Hope', ml: 'പ്രതീക്ഷയുടെ ഒരുക്കം' },
+        content: {
+          en: `Vishu begins before dawn, in the quiet work of arrangement. The night before, families prepare the Vishukkani: rice or grain for sustenance, fruits and vegetables for harvest, gold or coins for prosperity, a mirror for self-knowledge, sacred texts for wisdom, and the kani konna flower for the season’s gold.
+
+**Why the first sight matters**
+
+The belief is simple and tender: what you see first shapes how you enter the year. So the household chooses abundance, light, and order — not as magic, but as intention.`,
+          ml: `വിഷു പുലർക്കാലത്തിന് മുമ്പേ ആരംഭിക്കുന്നു. കുടുംബങ്ങൾ വിഷുക്കണി ഒരുക്കുന്നു: ധാന്യം, പഴങ്ങൾ, പൂക്കൾ, നിലവിളക്ക്, കണ്ണാടി, പവിത്രഗ്രന്ഥങ്ങൾ. വർഷത്തിലേക്ക് കടക്കുമ്പോൾ ആദ്യക്കാഴ്ച സമൃദ്ധമായിരിക്കട്ടെ എന്ന ആശയമാണിത്.`,
+        },
+      },
+      {
+        id: 'vishu-2',
+        title: { en: 'Morning Light', ml: 'പ്രഭാത വെളിച്ചം' },
+        content: {
+          en: `On Vishu morning, elders lead children to the kani with eyes half closed, so the first full sight is the arranged blessing. Lamps glow against the early dark. The mirror catches the flame. Yellow kani konna blossoms seem to hold the sun before sunrise.
+
+**Vishukkaineettam**
+
+After the viewing comes the giving. Elders offer vishukkaineettam — a small gift of money — to younger members of the family. The gesture carries a wish: may you have enough, and may you begin generously.`,
+          ml: `വിഷു പ്രഭാതത്തിൽ മുതിർന്നവർ കുട്ടികളെ കണ്ണടച്ച് കണിക്കരികിൽ കൊണ്ടുപോകുന്നു. ആദ്യ ദർശനം കഴിഞ്ഞ് മുതിർന്നവർ വിഷുക്കൈനീട്ടം നൽകുന്നു — സമൃദ്ധിയുടെ ആശീർവാദമായി.`,
+        },
+      },
+      {
+        id: 'vishu-3',
+        title: { en: 'A Festival of Thresholds', ml: 'ത്രെഷോൾഡുകളുടെ ഉത്സവം' },
+        content: {
+          en: `Vishu is quieter than some of Kerala’s grander festivals, but its meaning is precise. It honours the agricultural cycle, the movement of the sun, and the human need to begin again with care.
+
+Across Kerala, details vary — the exact arrangement, the foods prepared, the prayers offered — yet the heart remains the same: to greet the year by looking first at what is life-giving.`,
+          ml: `വിഷു കേരളത്തിലെ ഏറ്റവും ശാന്തമായ ഉത്സവങ്ങളിലൊന്നാണ്, പക്ഷേ അതിന്റെ അർത്ഥം ആഴമുള്ളതാണ്. സൂര്യന്റെ ചലനവും കൃഷിചക്രവും മനുഷ്യന്റെ പുതിയ തുടക്കവും ഇത് സ്മരിപ്പിക്കുന്നു.`,
+        },
+      },
+    ],
+  },
+  {
+    id: 'kalaripayattu',
+    title: { en: 'Kalaripayattu', ml: 'കളരിപ്പയറ്റ്' },
+    subtitle: { en: 'The Discipline of the Kalari', ml: 'കളരിയുടെ അച്ചടക്കം' },
+    description: {
+      en: 'Kalaripayattu is Kerala’s martial tradition — a practice of movement, breath, healing, and weaponry taught in the kalari, the training ground. It treats the body as something to be trained with patience, not force alone.',
+      ml: 'കളരിപ്പയറ്റ് കേരളത്തിന്റെ ആയോധന പാരമ്പര്യമാണ് — കളരിയിൽ പഠിപ്പിക്കുന്ന ചലനം, ശ്വാസം, ചികിത്സ, ആയുധാഭ്യാസം എന്നിവയുടെ സമന്വയം. ശരീരത്തെ ബലത്താൽ മാത്രമല്ല, ക്ഷമയോടെ പരിശീലിപ്പിക്കേണ്ട ഒന്നായാണ് ഇത് കാണുന്നത്.',
+    },
+    coverImage: '/images/perunthachan.png',
+    category: 'tradition',
+    readingTime: 17,
+    featured: false,
+    trending: true,
+    createdAt: '2024-04-01',
+    tags: ['kalaripayattu', 'martial art', 'kalari', 'tradition', 'kerala', 'training'],
+    sources: [
+      'Kalarippayattu: The Complete Guide — Philip B. Zarrilli',
+      'CVN Kalari and traditional gurukkal lineages (documented practice)',
+      'Kerala Folklore Academy: martial and ritual traditions',
+    ],
+    glossary: [
+      { term: 'Kalari', meaning: 'The training space — traditionally a sunken earth-floored arena — where Kalaripayattu is taught. It is both gymnasium and sacred space.', pronunciation: 'Ka-lari' },
+      { term: 'Gurukkal', meaning: 'The master teacher of the kalari, responsible for physical training, discipline, and often traditional treatments.', pronunciation: 'Gu-rukkal' },
+      { term: 'Meythari', meaning: 'Body-conditioning exercises that develop flexibility, strength, balance, and control.', pronunciation: 'Mey-thari' },
+      { term: 'Ankam', meaning: 'Historically, a duel or combat encounter in Kerala’s martial culture; remembered in ballads and local history.', pronunciation: 'An-kam' },
+    ],
+    chapters: [
+      {
+        id: 'kalaripayattu-1',
+        title: { en: 'Entering the Kalari', ml: 'കളരിയിലേക്ക് പ്രവേശിക്കൽ' },
+        content: {
+          en: `The kalari is entered with respect. Students step in with the right foot, salute the space, the teacher, and the tradition. The ground itself matters: its packed earth teaches balance and absorbs force.
+
+**A complete discipline**
+
+Kalaripayattu is not only combat. It includes conditioning, empty-hand sequences, weapon training, and knowledge of the body. In many lineages, the gurukkal also understands traditional massage and treatment — the art of harm and the art of healing held in the same hands.`,
+          ml: `കളരിയിലേക്ക് പ്രവേശിക്കുന്നത് ബഹുമാനത്തോടെയാണ്. വിദ്യാർത്ഥികൾ വലതു കാൽ മുൻവച്ച് അകത്ത് കടന്ന് കളരിയെയും ഗുരുക്കളെയും പരമ്പരയെയും വണങ്ങുന്നു. ഇത് യുദ്ധക്കല മാത്രമല്ല, ശരീരപരിശീലനവും ആയുധാഭ്യാസവും ചികിത്സാ പരിജ്ഞാനവും ഉൾപ്പെടുന്ന സമ്പൂർണ്ണ അച്ചടക്കമാണ്.`,
+        },
+      },
+      {
+        id: 'kalaripayattu-2',
+        title: { en: 'Body, Weapon, Breath', ml: 'ശരീരം, ആയുധം, ശ്വാസം' },
+        content: {
+          en: `Training moves from the body outward. Meythari builds the foundation — kicks, leaps, stances, and flowing sequences that teach the student to occupy space with awareness. Wooden weapons follow, then metal weapons in advanced stages, each demanding precision and restraint.
+
+**Control over force**
+
+The tradition values mastery, not aggression. A student learns when not to strike, how to read distance, and how to recover balance. The ideal practitioner is dangerous only when necessary — and disciplined always.`,
+          ml: `പരിശീലനം ശരീരത്തിൽ നിന്ന് ആരംഭിക്കുന്നു. മെയ്ത്താരി വഴക്കം, ബാലൻസ്, നിയന്ത്രണം എന്നിവ നൽകുന്നു. പിന്നീട് മര ആയുധങ്ങളും ലോഹ ആയുധങ്ങളും. ഈ പരമ്പര ആക്രോശത്തെക്കാൾ നിയന്ത്രണത്തെ വിലമതിക്കുന്നു.`,
+        },
+      },
+      {
+        id: 'kalaripayattu-3',
+        title: { en: 'Memory and Revival', ml: 'ഓർമ്മയും പുനരുജ്ജീവനവും' },
+        content: {
+          en: `Kalaripayattu’s history includes periods of suppression, adaptation, and revival. In the twentieth century, teachers and cultural organisations helped bring the practice back into public life — not as a relic, but as a living discipline.
+
+Today, kalaris in Kerala and beyond teach students who come for martial skill, performance, fitness, or cultural connection. The tradition endures when it is practised with humility: the kalari is not a museum of old movements, but a place where attention is still trained, one step at a time.`,
+          ml: `കളരിപ്പയറ്റിന് അടിച്ചമർത്തലിന്റെയും പുനരുജ്ജീവനത്തിന്റെയും ചരിത്രമുണ്ട്. ഇരുപതാം നൂറ്റാണ്ടിൽ ഗുരുക്കളും সাংസ്കാരിക സംഘടനകളും ഇത് വീണ്ടും ജീവനുള്ള കലയായി നിലനിർത്തി. ഇന്നും കളരി ശ്രദ്ധയും അച്ചടക്കവും പരിശീലിപ്പിക്കുന്ന ഒരു ഇടമാണ്.`,
+        },
+      },
+    ],
+  }

@@ -1,0 +1,118 @@
+// KathaVerse data model.
+// Local development uses SQLite; switch the provider to "postgresql" and point
+// DATABASE_URL at Postgres for deployment. No provider-specific types are used.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+/// reader | contributor | reviewer | admin
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  name         String
+  passwordHash String
+  role         String         @default("contributor")
+  createdAt    DateTime       @default(now())
+  contributions Contribution[]
+  reviews      Review[]
+  auditLogs    AuditLog[]
+}
+
+/// draft | submitted | in_review | approved | published
+model Story {
+  id            String        @id @default(cuid())
+  slug          String        @unique
+  titleEn       String
+  titleMl       String
+  subtitleEn    String
+  subtitleMl    String
+  descriptionEn String
+  descriptionMl String
+  coverImage    String
+  category      String
+  readingTime   Int
+  featured      Boolean       @default(false)
+  trending      Boolean       @default(false)
+  status        String        @default("published")
+  createdAt     DateTime      @default(now())
+  publishedAt   DateTime?
+  chapters      Chapter[]
+  translations  Translation[]
+}
+
+model Chapter {
+  id        String @id @default(cuid())
+  storyId   String
+  position  Int
+  titleEn   String
+  titleMl   String
+  contentEn String
+  contentMl String
+  story     Story  @relation(fields: [storyId], references: [id], onDelete: Cascade)
+
+  @@unique([storyId, position])
+}
+
+/// language: en | ml — status: machine_draft | reviewed | approved
+model Translation {
+  id        String   @id @default(cuid())
+  storyId   String
+  language  String
+  status    String   @default("machine_draft")
+  updatedAt DateTime @updatedAt
+  story     Story    @relation(fields: [storyId], references: [id], onDelete: Cascade)
+
+  @@unique([storyId, language])
+}
+
+/// draft | submitted | in_review | approved | published | rejected
+model Contribution {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  language    String
+  category    String
+  content     String
+  sources     String
+  authorName  String
+  authorEmail String
+  ownedContent Boolean @default(false)
+  status      String   @default("submitted")
+  reviewNote  String?
+  userId      String?
+  submittedAt DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user        User?    @relation(fields: [userId], references: [id])
+  reviews     Review[]
+}
+
+model Review {
+  id             String       @id @default(cuid())
+  contributionId String
+  reviewerId     String
+  decision       String
+  comment        String?
+  createdAt      DateTime     @default(now())
+  contribution   Contribution @relation(fields: [contributionId], references: [id], onDelete: Cascade)
+  reviewer       User         @relation(fields: [reviewerId], references: [id])
+
+  @@index([contributionId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  action    String
+  target    String
+  detail    String?
+  createdAt DateTime @default(now())
+  actor     User?    @relation(fields: [actorId], references: [id])
+
+  @@index([createdAt])
+}

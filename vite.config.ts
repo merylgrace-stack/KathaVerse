@@ -1,0 +1,19 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+  server: {
+    proxy: {
+      // The API keeps its cookie session on the same origin as the app.
+      '/api': {
+        target: process.env.API_ORIGIN ?? 'http://127.0.0.1:8787',
+        changeOrigin: false,
+      },
+    },
+  },
+})

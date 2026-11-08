@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+tsconfig.tsbuildinfo
+
+# Environment — never commit secrets
+.env
+.env.*
+!.env.example
+
+# Database (local SQLite dev file)
+prisma/dev.db
+prisma/dev.db-journal
+
+# Uploaded user files (server-generated, not source)
+public/uploads/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Misc temp folders
+.7-47DC-BC84-B9E6B38F5903}/

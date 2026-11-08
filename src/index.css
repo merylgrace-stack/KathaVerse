@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3ebdd;
+  --color-paper-deep: #e9ddc7;
+  --color-terra: #a6533c;
+  --color-brown: #38291f;
+  --color-gold: #d6ad70;
+  --color-green: #718064;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-malayalam: 'Noto Sans Malayalam', sans-serif;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: #f3ebdd;
+    color: #38291f;
+    font-family: var(--font-body);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(166, 83, 60, 0.05), transparent 45%),
+      radial-gradient(circle at 88% 12%, rgba(113, 128, 100, 0.06), transparent 45%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: #38291f;
+    color: #f3ebdd;
+  }
+
+  :focus-visible {
+    outline: 2px solid #a6533c;
+    outline-offset: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+
+.container-page {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* ---------- story artwork ---------- */
+
+.cover-fallback {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(214, 173, 112, 0.55), transparent 60%),
+    linear-gradient(150deg, #e9ddc7, #d8c7aa 60%, #c9b795);
+}
+
+.story-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(166, 83, 60, 0.3);
+  box-shadow: 0 18px 40px -22px rgba(56, 41, 31, 0.55);
+}
+
+/* ---------- story prose ---------- */
+
+.story-prose p {
+  margin: 0 0 1.05em;
+  line-height: 1.85;
+}
+
+.story-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.story-prose strong {
+  font-weight: 600;
+  color: #38291f;
+}
+
+.story-prose em {
+  font-style: italic;
+  color: rgba(56, 41, 31, 0.82);
+}
+
+.story-prose ul {
+  margin: 0 0 1.05em;
+  padding-left: 1.1em;
+  list-style: disc;
+}
+
+.story-prose li {
+  margin-bottom: 0.35em;
+  line-height: 1.7;
+}
+
+.glossary-term {
+  border-bottom: 1px dashed rgba(166, 83, 60, 0.6);
+  cursor: help;
+}
+
+.glossary-term:hover,
+.glossary-term:focus-visible {
+  background: rgba(214, 173, 112, 0.22);
+  outline: none;
+}
+
+/* ---------- book reader ---------- */
+
+.book-stage {
+  perspective: 2400px;
+}
+
+.book-spread {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  background: #efe4d1;
+  box-shadow:
+    0 34px 70px -34px rgba(56, 41, 31, 0.6),
+    0 0 0 1px rgba(56, 41, 31, 0.12),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.35);
+  transform-style: preserve-3d;
+}
+
+.book-page {
+  position: relative;
+  min-height: clamp(400px, 64vh, 640px);
+  padding: clamp(1.1rem, 2.6vw, 2.5rem);
+  background: linear-gradient(175deg, #fcf7ec, #f7efdf);
+  overflow: hidden;
+}
+
+.book-page--left {
+  border-radius: 8px 0 0 8px;
+  box-shadow: inset -22px 0 30px -26px rgba(56, 41, 31, 0.55);
+}
+
+.book-page--right {
+  border-radius: 0 8px 8px 0;
+  box-shadow: inset 22px 0 30px -26px rgba(56, 41, 31, 0.55);
+}
+
+.book-page .story-prose {
+  font-size: calc(1rem * var(--reader-scale, 1) * var(--reader-font, 1));
+  font-family: var(--font-body);
+  color: rgba(43, 31, 20, 0.9);
+}
+
+.book-page .story-prose p {
+  line-height: 1.9;
+}
+
+.book-page .story-prose strong {
+  display: inline-block;
+  margin-top: 0.35em;
+  font-family: var(--font-display);
+  font-size: 1.02em;
+  letter-spacing: 0.01em;
+}
+
+/* Both open pages stay at full contrast; only the gutter shadow suggests depth. */
+.book-page--left .page-body {
+  color: inherit;
+}
+
+.turn-sheet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: clamp(1.1rem, 2.6vw, 2.5rem);
+  background: linear-gradient(175deg, #fcf7ec, #f2e8d6);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  z-index: 10;
+  overflow: hidden;
+  will-change: transform;
+  box-shadow: 0 0 26px rgba(56, 41, 31, 0.16);
+}
+
+/* The travelling shadow rides the turning sheet as a transform, never as a repaint. */
+.turn-sheet::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(56, 41, 31, 0.22), transparent 38%);
+  opacity: 0;
+  animation: turn-shade var(--turn-duration, 700ms) cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.turn-sheet--next {
+  right: 0;
+  transform-origin: left center;
+  border-radius: 0 8px 8px 0;
+  animation: turn-next var(--turn-duration, 700ms) cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.turn-sheet--prev {
+  left: 0;
+  transform-origin: right center;
+  border-radius: 8px 0 0 8px;
+  animation: turn-prev var(--turn-duration, 700ms) cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes turn-shade {
+  0% { opacity: 0; }
+  45% { opacity: 1; }
+  100% { opacity: 0.35; }
+}
+
+@keyframes turn-next {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-179deg);
+  }
+}
+
+@keyframes turn-prev {
+  from {
+    transform: rotateY(-179deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/* ---------- motion ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .story-card:hover {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 860px) {
+  .book-spread {
+    grid-template-columns: 1fr;
+  }
+
+  .book-page--left {
+    display: none;
+  }
+
+  .book-page--right {
+    border-radius: 8px;
+  }
+
+  .turn-sheet {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    transform-origin: left center;
+  }
+
+  .book-page.book-page--left {
+    display: none;
+  }
+}
+
+/* ---------- misc ---------- */
+
+.wave-bar {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+  animation: wave 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.wave-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.progress-track {
+  height: 3px;
+  background: rgba(56, 41, 31, 0.12);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a6533c, #d6ad70);
+  transition: width 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .turn-sheet,
+  .wave-bar,
+  .story-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .book-spread {
+    display: block;
+    box-shadow: none;
+  }
+  .book-page {
+    min-height: 0;
+  }
+}
